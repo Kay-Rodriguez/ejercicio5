@@ -10,6 +10,10 @@ public class Tiroparabolico {
         this.distancia = distancia;
         this.tiempo = tiempo;
     }
+    //Constructor
+    public Tiroparabolico(){
+
+    }
 
     public double calcularVelocidad() {
         // Velocidad horizontal: v0x = distancia / tiempo
@@ -25,5 +29,11 @@ public class Tiroparabolico {
         double v0 = calcularVelocidad();
         double v0y = v0 * Math.sin(angulo);
         return (v0y * v0y) / (2 * GRAVITY);
+    }
+    //Metodo personalizado
+    public void imprimir(){
+        //Mostrar Resultados
+        System.out.println("La velocidad inicial necesaria es: %.2f m/s%n", calcularVelocidad());
+        System.out.println("La altura maxima alcanzada es: %.2f metros%n", calcularAlturaMaxima());  
     }
 }
